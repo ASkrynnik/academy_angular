@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-card-actions>
+        <mat-checkbox [checked]="isChecked" (click)="toggleIsSelected()" class="checkbox"></mat-checkbox>
+    </mat-card-actions>
+    <mat-card-title>
+        {{user.firstname}}  {{user.lastname}}
+    </mat-card-title>
+    <mat-card-content>
+        <p>{{user.email}}</p>
+        <p>{{user.phone}}</p>
+    </mat-card-content>
+</mat-card>

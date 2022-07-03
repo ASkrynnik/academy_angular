@@ -1,0 +1,18 @@
+<mat-toolbar class="toolbar">
+    <div class="options-wrapper">
+        <button class="btn" mat-flat-button (click)="selectAll()">Select all</button>
+        <button class="btn" mat-flat-button (click)="deleteUsers()">Delete</button>
+        <mat-form-field appearance="fill">
+            <mat-label>Sorting order</mat-label>
+            <mat-select [(ngModel)]="selected" (selectionChange)="sort()">
+              <mat-option value="firstname">By first name</mat-option>
+              <mat-option value="lastname">By last name</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Search users</mat-label>
+        <input type="email" matInput [(ngModel)]="searchValue" (blur)="search()" (keyup)="search()" placeholder="Enter name">
+      </mat-form-field>
+</mat-toolbar>
