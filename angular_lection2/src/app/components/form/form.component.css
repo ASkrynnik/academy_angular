@@ -1,0 +1,25 @@
+.form-title {
+    margin-left: 5vw;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin-left: 5vw;
+    margin-bottom: 8vh;
+}
+
+label {
+    margin: 15px 0 5px 0;
+}
+
+.err {
+    color: red;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100px;
+    margin: 3vh auto 0 auto;
+}

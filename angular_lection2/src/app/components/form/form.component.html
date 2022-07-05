@@ -1,0 +1,31 @@
+<h2 class="form-title">Add new user</h2>
+<form class="form" [formGroup]="newUserForm">
+    <label for="firstname">First name</label>
+    <input type="text" name="firstname" formControlName="firstname">
+    <span *ngIf="f['firstname'].touched && 
+    (f['firstname'].errors?.['required'] || 
+    f['firstname'].errors?.['minlength'])" class="err"
+    >This field must contain at least 2 letters</span>
+
+    <label for="lastname">Last name</label>
+    <input type="text" name="lastname" formControlName="lastname">
+    <span *ngIf="f['lastname'].touched && 
+    (f['lastname'].errors?.['required'] || 
+    f['lastname'].errors?.['minlength'] || 
+    f['lastname'].errors?.['maxlength'])" class="err"
+    >This field must contain at least 2 letters and 60 letters max.</span>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" formControlName="email">
+    <span *ngIf="f['email'].touched && 
+    f['email'].errors?.['required']" class="err"
+    >Field is required.</span>
+
+    <label for="phone">Phone</label>
+    <input type="tel" name="phone" formControlName="phone">
+    <span *ngIf="f['phone'].touched && 
+    f['phone'].errors?.['required']" class="err"
+    >Field is required.</span>
+
+    <button class="btn" (click)="onSubmit()" type="submit">Create new user!</button>
+</form>
