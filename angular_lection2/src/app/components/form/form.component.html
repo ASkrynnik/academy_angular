@@ -22,7 +22,7 @@
     >Field is required.</span>
 
     <label for="phone">Phone</label>
-    <input type="tel" name="phone" formControlName="phone">
+    <input (keypress)="keyPress($event)" type="tel" name="phone" formControlName="phone">
     <span *ngIf="f['phone'].touched && 
     f['phone'].errors?.['required']" class="err"
     >Field is required.</span>
